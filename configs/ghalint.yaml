@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghalint/main/json-schema/ghalint.json
+# ghalint configuration
+# https://github.com/suzuki-shunsuke/ghalint
+
+excludes: []
