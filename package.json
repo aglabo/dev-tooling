@@ -3,12 +3,7 @@
   "version": "0.1.0",
   "description": "Shared dev tooling configurations and runners for aglabo and atsushifx repositories",
   "keywords": [
-<<<<<<< HEAD
     "aglabo",
-||||||| parent of d05c0a1 (deps(package): add package.json for dev-tooling npm package)
-=======
-  "aglabo",
->>>>>>> d05c0a1 (deps(package): add package.json for dev-tooling npm package)
     "dev-tooling",
     "shareable-config",
     "lint",
