@@ -24,14 +24,11 @@
     "bin"
   ],
   "bin": {
-    "lint-actionlint": "bin/lint-actionlint",
-    "run-specs": "bin/run-specs"
+    "aglabo-actionlint": "bin/aglabo-actionlint",
+    "aglabo-ghalint": "bin/aglabo-ghalint"
   },
   "scripts": {
     "scan:secrets": "gitleaks dir --config ./configs/gitleaks.toml . && secretlint --secretlintrc ./configs/secretlint.config.yaml **/*",
-    "lint:gha": "pnpm run lint:gha:actions && pnpm run lint:gha:workflows",
-    "lint:gha:actions": "pnpm exec ghalint --config ./configs/ghalint.yaml run-action",
-    "lint:gha:workflows": "bash ./scripts/lint-actionlint.sh && pnpm exec ghalint --config ./configs/ghalint.yaml run",
     "test:sh": "bash scripts/run-specs.sh "
   }
 }
