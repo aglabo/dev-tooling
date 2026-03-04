@@ -1,0 +1,37 @@
+{
+  "name": "@aglabo/dev-tooling",
+  "version": "0.1.0",
+  "description": "Shared dev tooling configurations and runners for aglabo and atsushifx repositories",
+  "keywords": [
+    "aglabo",
+    "dev-tooling",
+    "shareable-config",
+    "lint",
+    "ci",
+    "github-actions",
+    "security",
+    "runner"
+  ],
+  "author": "atsushifx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aglabo/dev-tooling.git"
+  },
+  "files": [
+    "configs",
+    "runners",
+    "bin"
+  ],
+  "bin": {
+    "lint-actionlint": "bin/lint-actionlint",
+    "run-specs": "bin/run-specs"
+  },
+  "scripts": {
+    "scan:secrets": "gitleaks dir --config ./configs/gitleaks.toml . && secretlint --secretlintrc ./configs/secretlint.config.yaml **/*",
+    "lint:gha": "pnpm run lint:gha:actions && pnpm run lint:gha:workflows",
+    "lint:gha:actions": "pnpm exec ghalint --config ./configs/ghalint.yaml run-action",
+    "lint:gha:workflows": "bash ./scripts/lint-actionlint.sh && pnpm exec ghalint --config ./configs/ghalint.yaml run",
+    "test:sh": "bash scripts/run-specs.sh "
+  }
+}
