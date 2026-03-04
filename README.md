@@ -41,7 +41,7 @@ Thin wrapper scripts that:
 
 ## Directory Structure
 
-```
+```bash
 dev-tooling/
 ├ configs/
 ├ runners/
@@ -81,4 +81,3 @@ You may also use this repository via:
 ---
 
 MIT License
-
